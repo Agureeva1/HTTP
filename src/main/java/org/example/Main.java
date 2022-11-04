@@ -36,7 +36,7 @@ public class Main {
         // отправка запроса
         CloseableHttpResponse response = httpClient.execute(request);
         // вывод полученных заголовков
-        Arrays.stream(response.getAllHeaders()).forEach(System.out::println);
+        // Arrays.stream(response.getAllHeaders()).forEach(System.out::println);
         // чтение тела ответа
         String body = new String(response.getEntity().getContent().readAllBytes(), StandardCharsets.UTF_8);
         // System.out.println(body);
